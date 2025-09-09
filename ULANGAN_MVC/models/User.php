@@ -14,7 +14,7 @@ class User{
     }
 
     public function getUserById($id){
-        $stmt = $this->db->prepare("SELECT * FROM movies WHERE id = ?");
+        $stmt = $this->db->prepare("SELECT * FROM  movies WHERE id = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt-get_result();
