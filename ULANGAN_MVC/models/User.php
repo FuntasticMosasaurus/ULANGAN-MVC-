@@ -9,13 +9,13 @@ class User{
     }
 
     public function getAllUsers(){
-        $result = $this->db->query("SELECT * FROM katalogfilm");
-        return $result->fetch_all(MSQLY_ASSOC);
+        $result = $this->db->query("SELECT * FROM movies");
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getUserById($id){
-        $stmt = $this->db->prepare("SELECT * FROM katalogfilm WHERE id = ?");
-        $stmt = bind_param("i", $id);
+        $stmt = $this->db->prepare("SELECT * FROM movies WHERE id = ?");
+        $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt-get_result();
         return $result->fetch_assoc();
