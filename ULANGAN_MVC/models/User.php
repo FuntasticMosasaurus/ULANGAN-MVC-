@@ -17,7 +17,7 @@ class User{
         $stmt = $this->db->prepare("SELECT * FROM  movies WHERE id = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
-        $result = $stmt-get_result();
+        $result = $stmt->get_result();
         return $result->fetch_assoc();
     }
 
