@@ -21,12 +21,12 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($users as $user): ?>
+            <?php foreach ($user as $users): ?>
                  <tr>
-                 <td><?= $user['id'] ?></td>
-                 <td><?= $user['nama_film'] ?></td>
-                 <td><?= $user['sinopsis_film'] ?></td>
-                 <td><?= $user['production_house'] ?></td>
+                 <td><?= $users['id'] ?></td>
+                 <td><?= $users['nama_film'] ?></td>
+                 <td><?= $users['sinopsis_film'] ?></td>
+                 <td><?= $users['production_house'] ?></td>
                  </tr>
             <?php endforeach; ?>
           </tbody>
